@@ -20,6 +20,7 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
      */
     public $password_repeat;
     public $check;
+    public $phone;
     public static function tableName()
     {
         return 'user';
@@ -64,7 +65,8 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
             'email' => 'Email',
             'password' => 'Пароль',
             'password_repeat' => 'Повтор пароля',
-            'check' => 'Согласие на обработку персональных данных'
+            'check' => 'Согласие на обработку персональных данных',
+            'phone' => 'Номер телефона'
         ];
     }
 

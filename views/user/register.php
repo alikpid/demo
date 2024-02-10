@@ -30,11 +30,16 @@ use yii\bootstrap5\Html;
 
             <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
+            <?= $form->field($model, 'phone')->widget(\yii\widgets\MaskedInput::class, [
+                'mask' => '+7(999)-99-99',
+            ]) ?>
+
             <?= $form->field($model, 'password')->passwordInput(['maxlength' => true]) ?>
 
             <?= $form->field($model, 'password_repeat')->passwordInput(['maxlength' => true]) ?>
 
             <?= $form->field($model, 'check')->checkbox() ?>
+
 
             <div class="form-group">
                 <?= Html::submitButton('Регистрация', ['class' => 'btn btn-success', 'name' => 'register-button']) ?>
